@@ -6,14 +6,14 @@ export interface VideoPlayerConfig {
     loop: boolean;
     muted: boolean;
     playsinline: boolean;
-    preload: 'none' | 'metadata' | 'auto';
+    preload: "none" | "metadata" | "auto";
     desktopPoster: string;
     mobilePoster: string;
     desktopVideo: string;
     mobileVideo: string;
     videoType: string;
     showControls: boolean;
-    controlsType: 'full' | 'minimal' | 'none';
+    controlsType: "full" | "minimal" | "none";
     showPlayPause: boolean;
     showSeekbar: boolean;
     showVolume: boolean;
@@ -25,7 +25,7 @@ export interface VideoPlayerConfig {
     seekStep: number;
     lazyThreshold: number;
     pauseThreshold: number;
-    theme: 'dark' | 'light';
+    theme: "dark" | "light";
     accentColor: string;
     controlsBackground: string;
     centerPlayBackground: string;
@@ -50,6 +50,19 @@ export interface VideoPlayerConfig {
     tripleTapSeek: boolean;
     tripleTapSeconds: number;
     enableTapRipple: boolean;
+    singleActive?: boolean;
+    showLoop?: boolean;
+    showPip?: boolean;
+    showSubtitles?: boolean;
+    showQuality?: boolean;
+    skipIntro?: number;
+    theaterMode?: boolean;
+    resume?: boolean;
+    screenshot?: boolean;
+    airplay?: boolean;
+    miniPlayer?: boolean;
+    responsiveControls?: boolean;
+    bufferProgress?: boolean;
 }
 export interface VideoPlayerState {
     observer: IntersectionObserver | null;
@@ -82,6 +95,16 @@ export interface IconSet {
     fullscreen: string;
     exitFullscreen: string;
     speed: string;
+    loopOnce: string;
+    loop: string;
+    pip: string;
+    subtitle: string;
+    quality: string;
+    more: string;
+    theater: string;
+    screenshot: string;
+    airplay: string;
+    miniplayer: string;
 }
 export interface VideoEventDetail {
     [key: string]: any;
